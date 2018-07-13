@@ -49,15 +49,8 @@
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM">
-                        <barButtonItem key="rightBarButtonItem" title="Item" id="ibU-1E-2Kf">
-                            <connections>
-                                <action selector="hideToolbar:" destination="JEX-9P-axG" id="puE-nF-iOl"/>
-                            </connections>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Item" id="ibU-1E-2Kf"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="scrollView" destination="DBL-pe-any" id="DdQ-5h-onK"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
             </objects>

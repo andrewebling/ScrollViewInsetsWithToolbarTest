@@ -10,37 +10,20 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
-    @IBOutlet weak var detailDescriptionLabel: UILabel!
-    @IBOutlet weak var scrollView: UIScrollView!
-
-    func configureView() {
-        // Update the user interface for the detail item.
-        if let detail = detailItem {
-            if let label = detailDescriptionLabel {
-                label.text = detail.description
-            }
-        }
-        
-    }
+    var scrollView: UIScrollView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        configureView()
+
+        self.scrollView = UIScrollView(frame: self.view.bounds)
+        self.scrollView.backgroundColor = .blue
+        self.view.addSubview(self.scrollView)
+        self.scrollView.autoresizingMask = [.flexibleHeight,  .flexibleWidth]
         self.scrollView.contentSize = CGSize(width: 1024, height: 1024)
         self.navigationController?.isToolbarHidden = false
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    var detailItem: NSDate? {
-        didSet {
-            // Update the view.
-            configureView()
-        }
+        
+        let bbi = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(hideToolbar(_:)))
+        self.navigationItem.rightBarButtonItem = bbi
     }
 
     @IBAction func hideToolbar(_ sender: Any) {
