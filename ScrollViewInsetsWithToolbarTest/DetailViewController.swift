@@ -11,7 +11,7 @@ import UIKit
 class DetailViewController: UIViewController {
 
     @IBOutlet weak var detailDescriptionLabel: UILabel!
-
+    @IBOutlet weak var scrollView: UIScrollView!
 
     func configureView() {
         // Update the user interface for the detail item.
@@ -20,12 +20,15 @@ class DetailViewController: UIViewController {
                 label.text = detail.description
             }
         }
+        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         configureView()
+        self.scrollView.contentSize = CGSize(width: 1024, height: 1024)
+        self.navigationController?.isToolbarHidden = false
     }
 
     override func didReceiveMemoryWarning() {
@@ -40,6 +43,8 @@ class DetailViewController: UIViewController {
         }
     }
 
-
+    @IBAction func hideToolbar(_ sender: Any) {
+        self.navigationController?.isToolbarHidden = !(self.navigationController?.isToolbarHidden ?? true)
+    }
 }
 
