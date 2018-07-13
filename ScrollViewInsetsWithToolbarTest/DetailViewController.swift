@@ -25,7 +25,7 @@ class DetailViewController: UIViewController {
         self.textView = UITextView(frame: CGRect(x: 80, y: 80, width: 150, height: 40))
         self.scrollView.addSubview(self.textView)
         
-        self.navigationController?.isToolbarHidden = false
+        self.navigationController?.isToolbarHidden = true
         
         let bbi = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(hideToolbar(_:)))
         let editBBI = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editText(_:)))
