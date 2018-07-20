@@ -3,7 +3,6 @@ Test project to reproduce a scroll view indicator insets issue in isolation
 
 ## Differences to Rule Out ##
 
-* Test project is made with Autolayout?
+* View hierarchy different - scroll view contained within another view in problematic project
+* view stood up in a Storyboard
 * Test project is written in Swift?
-* View controller built in IB (although contents created programmatically
-* View has a Safe Area defined

@@ -12,13 +12,17 @@ class DetailViewController: UIViewController {
 
     var scrollView: UIScrollView!
     var textView: UITextView!
+    var containerView: UIView!
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.containerView = MyContainerView(frame: self.view.bounds)
+        self.containerView.autoresizingMask = [.flexibleHeight,  .flexibleWidth]
+        self.view.addSubview(self.containerView)
         self.scrollView = UIScrollView(frame: self.view.bounds)
         self.scrollView.backgroundColor = .blue
-        self.view.addSubview(self.scrollView)
+        self.containerView.addSubview(self.scrollView)
         self.scrollView.autoresizingMask = [.flexibleHeight,  .flexibleWidth]
         self.scrollView.contentSize = CGSize(width: 1024, height: 1024)
         
