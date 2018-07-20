@@ -16,6 +16,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
 
+        self.window = UIWindow(frame: UIScreen.main.bounds)
+        let detailVC = DetailViewController(nibName: nil, bundle: nil)
+        let nc = UINavigationController(rootViewController: detailVC)
+        self.window?.rootViewController = nc
+        self.window?.makeKeyAndVisible()
         return true
     }
 
