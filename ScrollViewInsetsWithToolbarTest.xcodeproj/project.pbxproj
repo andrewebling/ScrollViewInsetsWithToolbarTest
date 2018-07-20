@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		7D96F80E20F8821A0058935F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D96F80D20F8821A0058935F /* AppDelegate.swift */; };
-		7D96F81020F8821A0058935F /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D96F80F20F8821A0058935F /* MasterViewController.swift */; };
 		7D96F81220F8821A0058935F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D96F81120F8821A0058935F /* DetailViewController.swift */; };
 		7D96F81520F8821A0058935F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D96F81320F8821A0058935F /* Main.storyboard */; };
 		7D96F81720F8821D0058935F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D96F81620F8821D0058935F /* Assets.xcassets */; };
@@ -29,7 +28,6 @@
 /* Begin PBXFileReference section */
 		7D96F80A20F8821A0058935F /* ScrollViewInsetsWithToolbarTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollViewInsetsWithToolbarTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D96F80D20F8821A0058935F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7D96F80F20F8821A0058935F /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
 		7D96F81120F8821A0058935F /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		7D96F81420F8821A0058935F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D96F81620F8821D0058935F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -80,7 +78,6 @@
 			isa = PBXGroup;
 			children = (
 				7D96F80D20F8821A0058935F /* AppDelegate.swift */,
-				7D96F80F20F8821A0058935F /* MasterViewController.swift */,
 				7D96F81120F8821A0058935F /* DetailViewController.swift */,
 				7D96F81320F8821A0058935F /* Main.storyboard */,
 				7D96F81620F8821D0058935F /* Assets.xcassets */,
@@ -201,7 +198,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D96F81220F8821A0058935F /* DetailViewController.swift in Sources */,
-				7D96F81020F8821A0058935F /* MasterViewController.swift in Sources */,
 				7D96F80E20F8821A0058935F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
