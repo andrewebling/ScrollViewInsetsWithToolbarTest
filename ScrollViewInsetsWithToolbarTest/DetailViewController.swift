@@ -29,15 +29,20 @@ class DetailViewController: UIViewController {
         self.textView = UITextView(frame: CGRect(x: 80, y: 80, width: 150, height: 40))
         self.scrollView.addSubview(self.textView)
         
-        self.navigationController?.isToolbarHidden = true
+        self.navigationController?.isToolbarHidden = false
         
-        let bbi = UIBarButtonItem(barButtonSystemItem: .action, target: self, action: #selector(hideToolbar(_:)))
         let editBBI = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(editText(_:)))
-        self.navigationItem.rightBarButtonItems = [ bbi, editBBI]
+        self.navigationItem.rightBarButtonItems = [editBBI]
+        
+        let toggleButton = UIButton(frame: CGRect(x: 220, y: 80, width: 150, height: 40))
+        toggleButton.setTitle("Toggle Bars", for: .normal)
+        toggleButton.addTarget(self, action: #selector(hideToolbar(_:)), for: .touchUpInside)
+        self.scrollView.addSubview(toggleButton)
     }
 
     @objc func hideToolbar(_ sender: Any) {
         self.navigationController?.isToolbarHidden = !(self.navigationController?.isToolbarHidden ?? true)
+        self.navigationController?.setNavigationBarHidden(!(self.navigationController?.isNavigationBarHidden ?? true), animated: true)
     }
     
     @objc func editText(_ sender: Any) {
